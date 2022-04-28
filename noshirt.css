@@ -38,6 +38,17 @@
       border: 1px solid grey;
       position: relative;
       z-index: 2;
+      opacity: 0;
       top: -450px;
       left: 300px;
+  }
+  .white_bg_show 
+  {
+      background-color: grey;
+      border: 1px solid grey;
+      position: relative;
+      z-index: 2;
+      top: -450px;
+      left: 300px;
+      opacity: 1;
   }
