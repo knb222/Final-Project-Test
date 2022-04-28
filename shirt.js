@@ -9,6 +9,9 @@ window.onload = function () {
             console.log(joke.value);
 
             document.getElementById("joke").innerHTML=joke.value
+
+            document.getElementById("laugh").src="https://www.shockwave-sound.com/sound-effects/laugh-sounds/cannedlaugh.mp3"
+
         }
 
 
