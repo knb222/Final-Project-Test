@@ -9,8 +9,6 @@ window.onload = function () {
         //data given by the user
         username = form.elements.User.value;
         password = form.elements.Pass.value;
-        firstname = form.elements.fname.value;
-        lastname = form.elements.lname.value;
         NSFW = document.getElementsByName('NSFW');
 
         //checking that all fields are filled out
@@ -28,8 +26,6 @@ window.onload = function () {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        "firstname": firstname,
-                        "lastname": lastname,
                         "Username": username, 
                         "Password": password,
                         "NSFW": "Yes",
@@ -37,7 +33,7 @@ window.onload = function () {
                     }).then(response => response.json())
                     .then(data => console.log(data));
 
-                window.location.href = "ChuckNoShirt.html";
+                window.location.href = "chuckleZone.html";
 
             }
             else if (NSFW[1].checked){ 
@@ -48,8 +44,6 @@ window.onload = function () {
                         'Content-Type': 'application/json',
                     },
                     body: JSON.stringify({
-                        "firstname": firstname,
-                        "lastname": lastname,
                         "Username": username, 
                         "Password": password,
                         "NSFW": "No",
@@ -57,7 +51,7 @@ window.onload = function () {
                     }).then(response => response.json())
                     .then(data => console.log(data));
 
-                window.location.href = "ChuckShirt.html";
+                window.location.href = "chuckleZone.html";
             }
 
             else{
