@@ -12,46 +12,18 @@ window.onload = function () {
         NSFW = document.getElementsByName('NSFW');
 
         //checking that all fields are filled out
-        if(username=="" || password == "" || firstname == "" || lastname==""){
+        if(username=="" || password == ""){
             document.getElementById("inval").style = "color:red; opacity:1"
         }
 
         else{
             //if yes checked
             if(NSFW[0].checked){
-                //creating the user
-                fetch("http://localhost:3000/users",{
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        "Username": username, 
-                        "Password": password,
-                        "NSFW": "Yes",
-                    })
-                    }).then(response => response.json())
-                    .then(data => console.log(data));
-
-                window.location.href = "chuckleZone.html";
+                window.location.href = "ChuckNoShirt.html";
 
             }
             else if (NSFW[1].checked){ 
-                //creating the user
-                fetch("http://localhost:3000/users",{
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({
-                        "Username": username, 
-                        "Password": password,
-                        "NSFW": "No",
-                    })
-                    }).then(response => response.json())
-                    .then(data => console.log(data));
-
-                window.location.href = "chuckleZone.html";
+                window.location.href = "ChuckShirt.html";
             }
 
             else{

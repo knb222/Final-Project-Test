@@ -9,31 +9,18 @@ window.onload = function () {
         username = form.elements.User.value;
         password = form.elements.Pass.value;
 
-        //creating the user
-        userprom=fetch("http://localhost:3000/users",{
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                "Username": username, 
-                "Password": password,
-            })
-            }).then(response => response.json())
-            .then(data => console.log(data));
-
-        async function resolveprom() {
-            const user= await userprom;
+        //async function resolveprom() {
+        //    const user= await userprom;
             x=1 //if 200 good if 400 bad
             //if user and pass match in the database
-            if(x==1){
-                window.location.href = "chuckleZone.html";
+            if(username=="bob" && password=="1234"){
+                window.location.href = "ChuckShirt.html";
             }
             else{
                 document.getElementById("inval").style = "color:red; opacity:1"
             }
-        }
-        resolveprom();
+      //  }
+    //    resolveprom();
     })
 
 }
